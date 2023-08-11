@@ -1,0 +1,44 @@
+2023-08-05 15:42:27,679 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2023-08-05 15:42:27,682 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'config_helper']
+2023-08-05 15:42:27,685 DEBUG    root            Running [gcloud.config.config-helper] with arguments: [--format: "json"]
+2023-08-05 15:42:27,839 DEBUG    root            (gcloud.config.config-helper) Your current active account [default] does not have any valid credentials
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+For service account, please activate it first:
+
+  $ gcloud auth activate-service-account ACCOUNT
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/config/config_helper.py", line 99, in Run
+    cred = store.Load(use_google_auth=True)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 565, in Load
+    cred = _Load(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 744, in _Load
+    raise NoCredentialsForAccountException(account)
+googlecloudsdk.core.credentials.store.NoCredentialsForAccountException: Your current active account [default] does not have any valid credentials
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+For service account, please activate it first:
+
+  $ gcloud auth activate-service-account ACCOUNT
+2023-08-05 15:42:27,910 ERROR    root            (gcloud.config.config-helper) Your current active account [default] does not have any valid credentials
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+For service account, please activate it first:
+
+  $ gcloud auth activate-service-account ACCOUNT
